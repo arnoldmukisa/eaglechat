@@ -1,3 +1,5 @@
-# Mate Admin - React Redux Admin Dashboard. `v1.3`
+# EagleChat  `v0.1`
 
-### Please check `src/settings/index.js` & edit as your app.
+### Run the following commands
+`yarn` 
+`npm install`
