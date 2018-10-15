@@ -1,12 +1,12 @@
-import { create, SheetsRegistry } from 'jss';
-import preset from 'jss-preset-default';
-import { createMuiTheme } from 'material-ui/styles';
-import { purple, green } from 'material-ui/colors';
-import createGenerateClassName from 'material-ui/styles/createGenerateClassName';
+import { create, SheetsRegistry } from "jss";
+import preset from "jss-preset-default";
+import { createMuiTheme } from "material-ui/styles";
+import { purple, green } from "material-ui/colors";
+import createGenerateClassName from "material-ui/styles/createGenerateClassName";
 
 const theme = createMuiTheme({
   palette: {
-    primary: purple,
+    primary: green,
     secondary: green
   }
 });
@@ -14,7 +14,7 @@ const theme = createMuiTheme({
 // Configure JSS
 const jss = create(preset());
 jss.options.createGenerateClassName = createGenerateClassName;
-jss.options.insertionPoint = 'insertion-point-jss';
+jss.options.insertionPoint = "insertion-point-jss";
 
 export const sheetsManager = new Map();
 
