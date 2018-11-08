@@ -10,6 +10,10 @@ import AppLocale from 'languageProvider';
 import authAction from 'redux/auth/actions';
 import appActions from 'redux/app/actions';
 import themeActions from 'redux/themeSwitcher/actions';
+import ThemeSwitcher from '../ThemeSwitcher';
+import ThemeSwitcherButton from '../ThemeSwitcherButton';
+import SecondarySidebar from '../SecondarySidebar';
+import PageBreadcrumb from '../PageBreadcrumb';
 import MUIPProvider from 'components/uielements/materialUiPicker/momentProvider';
 import { rtl } from 'settings/withDirection';
 import Main, { Root, AppFrame } from './style';
@@ -62,12 +66,20 @@ class App extends Component {
 										: 'notFixed'
 							}
 						>
+			              <PageBreadcrumb url={url} />
+
 							<MUIPProvider>
 								<AppRouter
 									style={{ height: scrollHeight, overflowY: 'auto' }}
 									url={url}
 								/>
 							</MUIPProvider>
+							<ThemeSwitcherButton />
+			                <SecondarySidebar
+			                  InnerComponent={ThemeSwitcher}
+			                  currentActiveKey="themeSwitcher"
+			                  {...propsTopbar}
+			                />
 						</Main>
 
 						{anchor === 'right' ? <Sidebar {...options} anchor={anchor} /> : ''}

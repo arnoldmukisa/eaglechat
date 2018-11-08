@@ -1,17 +1,17 @@
 import React, { Component } from "react";
-import { Link, Redirect } from "react-router-dom";
+import { Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 import signinImg from "images/signup.svg";
-import fbBtnSvg from "images/facebook-app-symbol.svg";
-import gpBtnSvg from "images/google-plus.svg";
-import authBtnSvg from "images/auth0.svg";
-import Button from "components/uielements/button";
+// import fbBtnSvg from "images/facebook-app-symbol.svg";
+// import gpBtnSvg from "images/google-plus.svg";
+// import authBtnSvg from "images/auth0.svg";
+// import Button from "components/uielements/button";
 import authAction from "redux/auth/actions";
-import TextField from "components/uielements/textfield";
-import IntlMessages from "components/utility/intlMessages";
+// import TextField from "components/uielements/textfield";
+// import IntlMessages from "components/utility/intlMessages";
 import Scrollbars from "components/utility/customScrollBar";
 import SignInStyleWrapper from "./signin.style";
-import Auth0 from "helpers/auth0";
+// import Auth0 from "helpers/auth0";
 import Firebase from "helpers/firebase";
 import FirebaseLogin from "components/firebase";
 
@@ -34,7 +34,7 @@ class SignIn extends Component {
     const { login } = this.props;
     const { username, password } = this.state;
     login({ username, password });
-    this.props.history.push("/dashboard");
+    this.props.history.push("/dashboard/home");
   };
   onChangeUsername = event => this.setState({ username: event.target.value });
   onChangePassword = event => this.setState({ password: event.target.value });

@@ -1,15 +1,19 @@
-import React from 'react';
+import React, { Component } from 'react';
 import LayoutWrapper from 'components/utility/layoutWrapper';
-import Papersheet from 'components/utility/papersheet';
-import { FullColumn } from 'components/utility/rowColumn';
-import IntlMessages from 'components/utility/intlMessages';
-export default () => (
-  <LayoutWrapper>
-	  <FullColumn>
-		  <Papersheet title={<IntlMessages id="Visitors" />}>
-		  	Visitors
-			
-		  </Papersheet>
-	  </FullColumn>
-  </LayoutWrapper>
-);
+import { Row, FullColumn } from 'components/utility/rowColumn';
+import Contacts from './contactBox';
+
+export default class Contact extends Component {
+  render() {
+    const { scrollHeight } = this.props;
+    return (
+      <LayoutWrapper style={{ height: scrollHeight }}>
+        <Row>
+          <FullColumn>
+            <Contacts />
+          </FullColumn>
+        </Row>
+      </LayoutWrapper>
+    );
+  }
+}

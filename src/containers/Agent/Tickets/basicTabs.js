@@ -30,9 +30,11 @@ class BasicTabs extends React.Component {
       <div className={classes.root}>
         <AppBar position="static">
           <Tabs value={value} onChange={this.handleChange}>
-            <Tab label="View Agents" />
-            <Tab label="Add Agents" />
-            <Tab label="Roles" />
+            <Tab label="All Tickets" />
+            <Tab label="Open" />
+            <Tab label="Pending" />
+            <Tab label="Solved" />
+            <Tab label="Spam" />
           </Tabs>
         </AppBar>
         {
@@ -44,13 +46,22 @@ class BasicTabs extends React.Component {
         {
           value === 1 && 
           <TabContainer>
-            <Form  {...this.props}   />
+            <EnhancedTable  {...this.props}  />
           </TabContainer>
         }
         {
-          value === 2 && 
+          value === 1 && 
           <TabContainer>
-
+          </TabContainer>
+        }
+        {
+          value === 1 && 
+          <TabContainer>
+          </TabContainer>
+        }
+        {
+          value === 1 && 
+          <TabContainer>
           </TabContainer>
         }
       </div>

@@ -1,19 +1,45 @@
-import React from 'react';
-import LayoutWrapper from 'components/utility/layoutWrapper';
-import Papersheet from 'components/utility/papersheet';
-import { FullColumn } from 'components/utility/rowColumn';
+import React, { Component } from 'react';
+import { withStyles } from 'material-ui/styles';
 import IntlMessages from 'components/utility/intlMessages';
-import AddNewUser from "./add";
-export default () => (
-  <LayoutWrapper>
-	  <FullColumn>
-		  <Papersheet title={<IntlMessages id="Help" />}>
-		  	Manage Agents Here
-			<div className="SidebarButtonsWrapper">
-          		<AddNewUser />
-          	</div>
+import LayoutWrapper from 'components/utility/layoutWrapper';
+import { Row, FullColumn } from 'components/utility/rowColumn';
+import BasicTabs from './basicTabs';
+import Papersheet from 'components/utility/papersheet';
 
-		  </Papersheet>
-	  </FullColumn>
-  </LayoutWrapper>
-);
+const styles = theme => ({
+  root: {
+    flexGrow: 1,
+    marginTop: theme.spacing.unit * 3,
+    backgroundColor: theme.palette.background.paper,
+  },
+  iconRoot: {
+    flexGrow: 1,
+    width: '100%',
+    marginTop: theme.spacing.unit * 3,
+    backgroundColor: theme.palette.background.paper,
+  },
+  scrollRoot: {
+    flexGrow: 1,
+    width: 'auto',
+    marginTop: theme.spacing.unit * 3,
+    backgroundColor: theme.palette.background.paper,
+  },
+});
+
+class TabsExamples extends Component {
+  render() {
+    const { props } = this;
+    return (
+      <LayoutWrapper>
+        <Row>
+          <FullColumn>
+            <Papersheet title={<IntlMessages id="sidebar.basictabs" />}>
+              <BasicTabs {...props} />
+            </Papersheet>
+          </FullColumn>
+         </Row>
+      </LayoutWrapper>
+    );
+  }
+}
+export default withStyles(styles)(TabsExamples);

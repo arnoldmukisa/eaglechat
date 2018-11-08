@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-import LayoutWrapper from "../../components/utility/layoutWrapper";
+import LayoutWrapper from "components/utility/layoutWrapper";
 import {
   Row,
   OneThirdColumn,
   TwoThirdColumn,
   FullColumn,
   HalfColumn
-} from "../../components/utility/rowColumn";
+} from "components/utility/rowColumn";
 import InstagramFeed from "./InstagramFeed";
 import Contacts from "../Contact/contactBox";
 import Statistics from "./Statistics";
@@ -25,7 +25,7 @@ class Widget extends Component {
       <LayoutWrapper>
         <Row>
           <HalfColumn>
-            <SalesStats title="Monthly Sale Analytics" stretched />
+            <SalesStats title="Monthly Visitors per role" stretched />
           </HalfColumn>
 
           <HalfColumn>

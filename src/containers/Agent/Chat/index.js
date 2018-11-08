@@ -6,6 +6,7 @@ import { ChatViewWrapper } from "./message.style";
 import FirebaseHelper from "helpers/firebase";
 import HelperText from "components/utility/helper-text";
 import NoAPIKey from "images/NoAPIKey.svg";
+import Widget from 'components/widget'
 
 class Chat extends Component {
   render() {
@@ -21,6 +22,7 @@ class Chat extends Component {
               text="Please Enter Your API Key in the `src/settings/index.js`"
             />
           )}
+        <Widget />
       </ChatViewWrapper>
     );
   }

@@ -30,6 +30,16 @@ theme.palette = {
     '0px 11px 14px -7px rgba(0, 0, 0, 0.2),0px 23px 36px 3px rgba(0, 0, 0, 0.14),0px 9px 44px 8px rgba(0, 0, 0, 0.12)', // 23 -> Elevation 23
     '0px 11px 15px -7px rgba(0, 0, 0, 0.2),0px 24px 38px 3px rgba(0, 0, 0, 0.14),0px 9px 46px 8px rgba(0, 0, 0, 0.12)', // 24 -> Elevation 24
   ],
+  darkgreen: [
+    '156e4c', // 6 - 600
+    '#388E3C', // 7 - 700
+    '#2E7D32', // 8 - 800
+    '#1B5E20', // 9 - 900
+    '#B9F6CA', // 10 - A100
+    '#69F0AE', // 11 - A200
+    '#00E676', // 12 - A400
+    '#00C853', // 13 - A700
+  ],
   blue: [
     '#E3F2FD', // 0 - 50
     '#BBDEFB', // 1 - 100

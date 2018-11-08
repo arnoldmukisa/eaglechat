@@ -73,11 +73,11 @@ class ThemeSwitcher extends Component {
           <LanguageSwitcher />
         </SwitcherBlock>
 
-        <PurchaseActionBtn>
+        {/*<PurchaseActionBtn>
           <a href="" className="purchaseBtn">
             <IntlMessages id="themeSwitcher.purchase" />
           </a>
-        </PurchaseActionBtn>
+        </PurchaseActionBtn>*/}
       </SidebarInner>
     );
   }

@@ -1,21 +1,25 @@
 const data = {
-  labels: ["Product X", "Product Y", "Product Z"],
+  labels: ["Admissions", "Registrar", "Coach", "Business", "Finance"],
   datasets: [
     {
-      data: [300, 100, 50],
+      data: [300, 100, 50, 75, 90],
       borderWidth: 1,
       borderColor: ["#ffffff", "#ffffff", "#ffffff"],
       backgroundColor: [
         "rgb(153, 102, 255)",
-        "rgb(54, 162, 235)",
+        "rgb(150, 162, 23)",
+        "rgb(150, 102, 65)",
+        "rgb(54, 16, 235)",
         "rgb(255, 99, 132)"
       ],
       hoverBackgroundColor: [
         "rgb(153, 102, 255)",
-        "rgb(54, 162, 235)",
+        "rgb(150, 162, 23)",
+        "rgb(150, 102, 65)",
+        "rgb(54, 16, 235)",
         "rgb(255, 99, 132)"
       ],
-      hoverBorderColor: ["#ffffff", "#ffffff", "#ffffff"]
+      hoverBorderColor: ["#ffffff", "#ffffff", "#ffffff", "#ffffff", "#ffffff"]
     }
   ]
 };

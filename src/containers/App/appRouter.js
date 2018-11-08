@@ -4,13 +4,10 @@ import Route from 'components/utility/customRoute';
 
 const routes = [
 	{
-		path: '',
-		component: asyncComponent(() => import('../dashboard.js')),
+		path: 'home',
+		component: asyncComponent(() => import('../Widgets')),
 	},
-	{
-		path: 'blank-page',
-		component: asyncComponent(() => import('../blankPage.js')),
-	},
+	
 	{
 		path: 'chat',
 		component: asyncComponent(() => import('../Agent/Chat')),

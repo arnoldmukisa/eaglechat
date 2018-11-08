@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Button from '../uielements/button';
 import { notification } from '../index';
-import fireBtnSvg from '../../images/firebase.svg';
+// import fireBtnSvg from '../../images/firebase.svg';
 import Firebase from '../../helpers/firebase/index';
 import { TextField, Dialog, DialogTitle } from './firebase.style';
 import FirebaseLoginModal from './firebase.style';
