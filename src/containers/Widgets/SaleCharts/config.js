@@ -2,7 +2,7 @@ const data = {
   labels: ["January", "February", "March", "April", "May", "June"],
   datasets: [
     {
-      label: "Monthly Sales",
+      label: "Monthly Vistors",
       backgroundColor: "rgba(54, 162, 235, 0.5)",
       borderColor: "rgb(54, 162, 235)",
       borderWidth: 1,

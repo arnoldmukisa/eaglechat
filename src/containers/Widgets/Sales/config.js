@@ -1,5 +1,5 @@
 const data = {
-  labels: ["Admissions", "Registrar", "Coach", "Business", "Finance"],
+  labels: ["Admissions", "Registrar", "Coaches", "Business", "Financial Aid"],
   datasets: [
     {
       data: [300, 100, 50, 75, 90],
