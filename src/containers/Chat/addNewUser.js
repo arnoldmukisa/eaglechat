@@ -217,4 +217,7 @@ function mapStateToProps(state) {
   const { user, users, addNewUsersProp } = state.Chat;
   return { user, users, addNewUsersProp, ...addNewUsersProp };
 }
-export default connect(mapStateToProps, actions)(ComposeMessage);
+export default connect(
+  mapStateToProps,
+  actions
+)(ComposeMessage);

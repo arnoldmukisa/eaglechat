@@ -8,9 +8,7 @@ import LayoutWrappers from "components/utility/layoutWrapper";
 import Dialogs from "components/uielements/dialogs";
 import InputNames from "components/chat/inputName";
 import Papersheet from "components/utility/papersheet/index.js";
-import Radio, {
-  RadioGroup as RadioGroups
-} from "components/uielements/radio";
+import Radio, { RadioGroup as RadioGroups } from "components/uielements/radio";
 import { DatePicker as DatePickers } from "components/uielements/materialUiPicker";
 import { InputLabel as InputLabels } from "components/uielements/input";
 import {
@@ -92,7 +90,7 @@ const MessageSingle = styled.div`
     &.isUser {
       justify-content: flex-end;
       .mateMessageContentText {
-        background: #2979ff;
+        background: #156e4c;
         color: #ffffff;
         border-radius: 3px 0 3px 3px;
 
@@ -107,7 +105,7 @@ const MessageSingle = styled.div`
           left: auto;
           right: -9px;
           border-width: 0px 0 10px 10px;
-          border-color: transparent #2979ff;
+          border-color: transparent #156e4c;
           margin-top: 0;
         }
       }
@@ -217,7 +215,7 @@ const ChatSidebar = styled.div`
     button {
       margin: 0;
       color: #ffffff;
-      background: #303e9f;
+      background: #156e4c;
     }
   }
   @media only screen and (min-width: 768px) {

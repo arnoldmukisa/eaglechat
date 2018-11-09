@@ -25,7 +25,7 @@ class Widget extends Component {
       <LayoutWrapper>
         <Row>
           <HalfColumn>
-            <SalesStats title="Monthly Visitors per role" stretched />
+            <SalesStats title="Monthly Visitors Per Role" stretched />
           </HalfColumn>
 
           <HalfColumn>
@@ -42,8 +42,8 @@ class Widget extends Component {
             <Row>
               <HalfColumn sm={6} md={6}>
                 <SalesProgress
-                  title="Daily Sales"
-                  currency="$"
+                  title="Daily Chats"
+                  // currency="$"
                   amount="60"
                   progress="67"
                   color="rgb(153, 102, 255)"
@@ -53,8 +53,8 @@ class Widget extends Component {
 
               <HalfColumn sm={6} md={6}>
                 <SalesProgress
-                  title="Weekly Sales"
-                  currency="$"
+                  title="Weekly Chats"
+                  // currency="$"
                   amount="560"
                   progress="49"
                   color="rgb(255, 99, 132)"
@@ -64,8 +64,8 @@ class Widget extends Component {
 
               <HalfColumn sm={6} md={6}>
                 <SalesProgress
-                  title="Monthly Sales"
-                  currency="$"
+                  title="Monthly Chats"
+                  // currency="$"
                   amount="2430"
                   progress="54"
                   color="rgb(54, 162, 235)"
@@ -75,8 +75,8 @@ class Widget extends Component {
 
               <HalfColumn sm={6} md={6}>
                 <SalesProgress
-                  title="Daily Sales"
-                  currency="$"
+                  title="Daily Visitors"
+                  // currency="$"
                   amount="30128"
                   progress="79"
                   color="rgb(255, 159, 64)"
@@ -94,30 +94,30 @@ class Widget extends Component {
 
           <OneThirdColumn sm={12} md={6}>
             <Transaction
-              title="Transactions"
+              title="Tickets"
               duration="Jun 24 - Jul 23"
               amount="59.01"
-              currency="$"
+              // currency="$"
               data={data2}
               upward
               style={{ marginBottom: 20 }}
             />
 
             <Transaction
-              title="Transactions"
+              title="Open Tickets"
               duration="Jul 24 - Aug 23"
               amount="79.51"
-              currency="$"
+              // currency="$"
               data={data}
               downward
               style={{ marginBottom: 20 }}
             />
 
             <Transaction
-              title="Transactions"
+              title="Closed Tickets"
               duration="Aug 24 - Sep 23"
               amount="89.71"
-              currency="$"
+              // currency="$"
               data={data3}
               upward
             />
@@ -126,7 +126,7 @@ class Widget extends Component {
 
         <Row>
           <FullColumn>
-            <TableWidget title="Employees Data" />
+            <TableWidget title="Agent Data" />
           </FullColumn>
         </Row>
         <Row>
@@ -139,7 +139,7 @@ class Widget extends Component {
           </OneThirdColumn>
 
           <OneThirdColumn sm={12} md={12}>
-            <SaleChart title="Yearly Sales Data" stretched />
+            <SaleChart title="Yearly Data" stretched />
           </OneThirdColumn>
         </Row>
       </LayoutWrapper>

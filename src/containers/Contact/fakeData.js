@@ -1,10 +1,10 @@
 export const otherAttributes = [
-  { title: 'Name', value: 'name', type: 'text' },
-  { title: 'Mobile', value: 'mobile', type: 'phoneNumber' },
-  { title: 'Home', value: 'home', type: 'phoneNumber' },
-  { title: 'Company', value: 'company', type: 'company' },
-  { title: 'Work', value: 'work', type: 'phoneNumber' },
-  { title: 'Notes', value: 'note', type: 'paragraph' }
+  { title: "Name", value: "name", type: "text" },
+  { title: "Mobile", value: "mobile", type: "phoneNumber" },
+  { title: "Home", value: "home", type: "phoneNumber" },
+  { title: "Company", value: "company", type: "company" },
+  { title: "Work", value: "work", type: "phoneNumber" },
+  { title: "Notes", value: "note", type: "paragraph" }
 ];
 
 const contactList = JSON.parse(`[
@@ -1010,7 +1010,7 @@ const contactList = JSON.parse(`[
   }
 ]`);
 export const demoAvatar =
-  'https://s3.amazonaws.com/uifaces/faces/twitter/silv3rgvn/128.jpg';
+  "https://s3.amazonaws.com/uifaces/faces/twitter/silv3rgvn/128.jpg";
 export default class fakeData {
   constructor(size = 100) {
     this.size = size;

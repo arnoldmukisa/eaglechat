@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
-import classNames from 'classnames';
-import PropTypes from 'prop-types';
-import Scrollbars from 'components/utility/customScrollBar';
-import { withStyles } from 'material-ui/styles';
-import keycode from 'keycode';
+import React, { Component } from "react";
+import classNames from "classnames";
+import PropTypes from "prop-types";
+import Scrollbars from "components/utility/customScrollBar";
+import { withStyles } from "material-ui/styles";
+import keycode from "keycode";
 import {
   TableBody,
   TableCell,
@@ -11,16 +11,16 @@ import {
   TableHead,
   TablePagination,
   TableRow,
-  TableSortLabel,
-} from 'material-ui/Table';
-import { Table } from './materialUiTables.style';
-import Toolbar from 'material-ui/Toolbar';
-import Typography from 'material-ui/Typography';
-import Paper from 'material-ui/Paper';
-import Checkbox from 'material-ui/Checkbox';
-import IconButton from 'material-ui/IconButton';
-import Icon from 'components/uielements/icon/index.js';
-import Tooltip from '@material-ui/core/Tooltip';
+  TableSortLabel
+} from "material-ui/Table";
+import { Table } from "./materialUiTables.style";
+import Toolbar from "material-ui/Toolbar";
+import Typography from "material-ui/Typography";
+import Paper from "material-ui/Paper";
+import Checkbox from "material-ui/Checkbox";
+import IconButton from "material-ui/IconButton";
+import Icon from "components/uielements/icon/index.js";
+import Tooltip from "@material-ui/core/Tooltip";
 
 let counter = 0;
 function createData(name, calories, fat, carbs, protein) {
@@ -30,15 +30,20 @@ function createData(name, calories, fat, carbs, protein) {
 
 const columnData = [
   {
-    id: 'name',
+    id: "name",
     numeric: false,
     disablePadding: true,
-    label: 'Name',
+    label: "Name"
   },
-  { id: 'role', numeric: false, disablePadding: false, label: 'Role' },
-  { id: 'email', numeric: false, disablePadding: false, label: 'Email' },
-  { id: 'gender', numeric: false, disablePadding: false, label: 'Gender' },
-  { id: 'clients', numeric: true, disablePadding: false, label: 'Number of clients' },
+  { id: "role", numeric: false, disablePadding: false, label: "Role" },
+  { id: "email", numeric: false, disablePadding: false, label: "Email" },
+  { id: "gender", numeric: false, disablePadding: false, label: "Gender" },
+  {
+    id: "clients",
+    numeric: true,
+    disablePadding: false,
+    label: "Number of clients"
+  }
 ];
 
 class EnhancedTableHead extends Component {
@@ -51,7 +56,7 @@ class EnhancedTableHead extends Component {
       order,
       orderBy,
       numSelected,
-      rowCount,
+      rowCount
     } = this.props;
 
     return (
@@ -69,11 +74,11 @@ class EnhancedTableHead extends Component {
               <TableCell
                 key={column.id}
                 numeric={column.numeric}
-                padding={column.disablePadding ? 'none' : 'default'}
+                padding={column.disablePadding ? "none" : "default"}
               >
                 <Tooltip
                   title="Sort"
-                  placement={column.numeric ? 'bottom-end' : 'bottom-start'}
+                  placement={column.numeric ? "bottom-end" : "bottom-start"}
                   enterDelay={300}
                 >
                   <TableSortLabel
@@ -95,21 +100,21 @@ class EnhancedTableHead extends Component {
 
 const toolbarStyles = theme => ({
   root: {
-    paddingRight: 2,
+    paddingRight: 2
   },
   highlight: {
     color: theme.palette.grey[50],
-    backgroundColor: theme.palette.primary[500],
+    backgroundColor: theme.palette.primary[500]
   },
   spacer: {
-    flex: '1 1 100%',
+    flex: "1 1 100%"
   },
   actions: {
-    fill: theme.palette.text.primary,
+    fill: theme.palette.text.primary
   },
   title: {
-    flex: '0 0 auto',
-  },
+    flex: "0 0 auto"
+  }
 });
 
 let EnhancedTableToolbar = props => {
@@ -118,7 +123,7 @@ let EnhancedTableToolbar = props => {
   return (
     <Toolbar
       className={classNames(classes.root, {
-        [classes.highlight]: numSelected > 0,
+        [classes.highlight]: numSelected > 0
       })}
     >
       <div className={classes.title}>
@@ -150,7 +155,7 @@ let EnhancedTableToolbar = props => {
 
 EnhancedTableToolbar.propTypes = {
   classes: PropTypes.object.isRequired,
-  numSelected: PropTypes.number.isRequired,
+  numSelected: PropTypes.number.isRequired
 };
 
 EnhancedTableToolbar = withStyles(toolbarStyles)(EnhancedTableToolbar);
@@ -160,117 +165,105 @@ export default class EnhancedTable extends Component {
     super(props, context);
 
     this.state = {
-      order: 'asc',
-      orderBy: 'calories',
+      order: "asc",
+      orderBy: "calories",
       selected: [],
       data: [
         createData(
-          'John A. Smith',
-          'Admissions',
-          'johnsmith1990@gmail.com',
-          'Male',
+          "John A. Smith",
+          "Admissions",
+          "johnsmith1990@gmail.com",
+          "Male",
           4
         ),
+        createData("Bob C. Uncle", "General", "bob_CX@gmail.com", "Male", 24),
         createData(
-          'Bob C. Uncle',
-          'General',
-          'bob_CX@gmail.com',
-          'Male',
-          24
-        ),
-        createData(
-          'John D. Smith',
-          'Business',
-          'john_smith44@gmail.com',
-          'Male',
+          "John D. Smith",
+          "Business",
+          "john_smith44@gmail.com",
+          "Male",
           11
         ),
         createData(
-          'Angelica Vance',
-          'Finance',
-          'vance_angel@gmail.com',
-          'Female',
+          "Angelica Vance",
+          "Finance",
+          "vance_angel@gmail.com",
+          "Female",
           4
         ),
         createData(
-          'Ashton Nash',
-          'Registrar	',
-          'ashtonNash@gmail.com',
-          'Male',
+          "Ashton Nash",
+          "Registrar	",
+          "ashtonNash@gmail.com",
+          "Male",
           7
         ),
         createData(
-          'Brenden Greer',
-          'Coach',
-          'brenden_greer@gmail.com',
-          'Male',
+          "Brenden Greer",
+          "Coach",
+          "brenden_greer@gmail.com",
+          "Male",
           4
         ),
         createData(
-          'Bruno Wagner',
-          'Business',
-          'bruno_wagner@gmail.com',
-          'Male',
+          "Bruno Wagner",
+          "Business",
+          "bruno_wagner@gmail.com",
+          "Male",
           8
         ),
         createData(
-          'Bradley Wilder',
-          'Admissions',
-          'bradely_wilder@gmail.com',
-          'Male',
+          "Bradley Wilder",
+          "Admissions",
+          "bradely_wilder@gmail.com",
+          "Male",
           12
         ),
         createData(
-          'Colleen Green',
-          'Finance',
-          'collen_green@gmail.com',
-          'Male',
+          "Colleen Green",
+          "Finance",
+          "collen_green@gmail.com",
+          "Male",
           3
         ),
         createData(
-          'Finn Marshall',
-          'General',
-          'finn_marshall@gmail.com',
-          'Male',
+          "Finn Marshall",
+          "General",
+          "finn_marshall@gmail.com",
+          "Male",
           2
         ),
         createData(
-          'Dai Snider',
-          'Registrar',
-          'dai_snider@gmail.com',
-          'Male',
+          "Dai Snider",
+          "Registrar",
+          "dai_snider@gmail.com",
+          "Male",
           6
         ),
         createData(
-          'Garrett Joyce',
-          'Business',
-          'joyce_garrett@gmail.com',
-          'Female',
+          "Garrett Joyce",
+          "Business",
+          "joyce_garrett@gmail.com",
+          "Female",
           4
         ),
-        createData(
-          'Gavin Rios',
-          'Coach',
-          'g_rios14@gmail.com',
-          'Male',
-          1
-        ),
+        createData("Gavin Rios", "Coach", "g_rios14@gmail.com", "Male", 1)
       ].sort((a, b) => (a.calories < b.calories ? -1 : 1)),
       page: 0,
-      rowsPerPage: 5,
+      rowsPerPage: 5
     };
   }
 
   handleRequestSort = (event, property) => {
     const orderBy = property;
-    let order = 'desc';
+    let order = "desc";
 
-    if (this.state.orderBy === property && this.state.order === 'desc') {
-      order = 'asc';
+    if (this.state.orderBy === property && this.state.order === "desc") {
+      order = "asc";
     }
 
     const data =
-      order === 'desc'
+      order === "desc"
         ? this.state.data.sort((a, b) => (b[orderBy] < a[orderBy] ? -1 : 1))
         : this.state.data.sort((a, b) => (a[orderBy] < b[orderBy] ? -1 : 1));
 
@@ -286,7 +279,7 @@ export default class EnhancedTable extends Component {
   };
 
   handleKeyDown = (event, id) => {
-    if (keycode(event) === 'space') {
+    if (keycode(event) === "space") {
       this.handleClick(event, id);
     }
   };
@@ -329,7 +322,7 @@ export default class EnhancedTable extends Component {
     return (
       <Paper className={classes.root}>
         <EnhancedTableToolbar numSelected={selected.length} />
-        <Scrollbars style={{ width: '100%' }}>
+        <Scrollbars style={{ width: "100%" }}>
           <Table className={classes.table}>
             <EnhancedTableHead
               numSelected={selected.length}

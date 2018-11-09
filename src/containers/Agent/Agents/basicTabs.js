@@ -1,21 +1,21 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import AppBar from 'components/uielements/appbar';
-import Tabs, { Tab } from 'components/uielements/tabs';
-import Form from './ReduxForm'
-import EnhancedTable from './MaterialUiTables/enhancedTable';
+import React from "react";
+import PropTypes from "prop-types";
+import AppBar from "components/uielements/appbar";
+import Tabs, { Tab } from "components/uielements/tabs";
+import Form from "./ReduxForm";
+import EnhancedTable from "./MaterialUiTables/enhancedTable";
 
 function TabContainer(props) {
   return <div style={{ padding: 8 * 3 }}>{props.children}</div>;
 }
 
 TabContainer.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node.isRequired
 };
 
 class BasicTabs extends React.Component {
   state = {
-    value: 0,
+    value: 0
   };
 
   handleChange = (event, value) => {
@@ -35,31 +35,24 @@ class BasicTabs extends React.Component {
             <Tab label="Roles" />
           </Tabs>
         </AppBar>
-        {
-          value === 0 && 
+        {value === 0 && (
           <TabContainer>
-            <EnhancedTable  {...this.props}  />
+            <EnhancedTable {...this.props} />
           </TabContainer>
-        }
-        {
-          value === 1 && 
+        )}
+        {value === 1 && (
           <TabContainer>
-            <Form  {...this.props}   />
+            <Form {...this.props} />
           </TabContainer>
-        }
-        {
-          value === 2 && 
-          <TabContainer>
-
-          </TabContainer>
-        }
+        )}
+        {value === 2 && <TabContainer />}
       </div>
     );
   }
 }
 
 BasicTabs.propTypes = {
-  classes: PropTypes.object.isRequired,
+  classes: PropTypes.object.isRequired
 };
 
 export default BasicTabs;

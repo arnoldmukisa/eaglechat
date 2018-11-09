@@ -20,7 +20,7 @@ const data = {
     },
     {
       type: "bar",
-      label: "Sales",
+      label: "Chats",
       data: [200, 185, 590, 621, 250, 400, 95],
       fill: false,
       borderColor: "rgba(255, 99, 132, 0.7)",
