@@ -78,7 +78,7 @@ const demoUsers = [
     gender: 'Female',
     language: 'Arabic',
     profileImageUrl:
-      'https://thumb7.shutterstock.com/display_pic_with_logo/818215/552201991/stock-photo-beautiful-young-grinning-professional-black-woman-in-office-with-eyeglasses-folded-arms-and-552201991.jpg'
+      'https://campus-tour-application.firebaseapp.com/assets/img/account_circle.svg'
   },
   {
     name: 'Dorena Sherry',
@@ -87,7 +87,7 @@ const demoUsers = [
     gender: 'Male',
     language: 'Bosnian',
     profileImageUrl:
-      'https://thumb7.shutterstock.com/display_pic_with_logo/818215/552201991/stock-photo-beautiful-young-grinning-professional-black-woman-in-office-with-eyeglasses-folded-arms-and-552201991.jpg'
+      'https://campus-tour-application.firebaseapp.com/assets/img/account_circle.svg'
   },
   {
     name: 'Gerek MacGuffog',

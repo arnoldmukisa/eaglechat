@@ -1,11 +1,15 @@
-import React, { Component } from 'react';
-import { Widget, addResponseMessage, addLinkSnippet, addUserMessage } from 'react-chat-widget';
+import React, { Component } from "react";
+import {
+  Widget,
+  addResponseMessage,
+  addLinkSnippet,
+  addUserMessage
+} from "react-chat-widget";
 import notification from "components/notification";
 import { connect } from "react-redux";
 import actions from "redux/chat/actions";
 
-import 'react-chat-widget/lib/styles.css';
-
+import "react-chat-widget/lib/styles.css";
 
 const { sendMessage } = actions;
 
@@ -16,7 +20,7 @@ class App extends Component {
     addResponseMessage("Hello, How may we help you?");
   }
 
-  handleNewUserMessage = (newMessage) => {
+  handleNewUserMessage = newMessage => {
     console.log(`New message incoming! ${newMessage}`);
     // Now send the message throught the backend API
 
@@ -26,7 +30,7 @@ class App extends Component {
     } else {
       notification("error", "Please type something");
     }
-  }
+  };
 
   state = {
     newMessage: ""
@@ -38,17 +42,20 @@ class App extends Component {
         <Widget
           handleNewUserMessage={this.handleNewUserMessage}
           title="Eagle Chat"
-          subtitle="Have a question? Talk to one of our agents"
+          subtitle="Talk to one of our agents"
         />
       </div>
     );
-  } 
+  }
 }
 
 function mapStateToProps(state) {
   const { selectedChatRoom, openCompose } = state.Chat;
   return { selectedChatRoom, openCompose };
 }
-export default connect(mapStateToProps, {
-  sendMessage
-})(App);
+export default connect(
+  mapStateToProps,
+  {
+    sendMessage
+  }
+)(App);

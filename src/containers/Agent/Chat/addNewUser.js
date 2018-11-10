@@ -59,7 +59,7 @@ class ComposeMessage extends Component {
       gender: "Male",
       language: "English",
       profileImageUrl:
-        "https://thumb7.shutterstock.com/display_pic_with_logo/818215/552201991/stock-photo-beautiful-young-grinning-professional-black-woman-in-office-with-eyeglasses-folded-arms-and-552201991.jpg"
+        "https://campus-tour-application.firebaseapp.com/assets/img/account_circle.svg"
     });
   };
   userNameExist = newUser =>

@@ -1,13 +1,13 @@
-import { all, takeEvery, put, call, fork } from 'redux-saga/effects';
-import actions from './actions';
-import FirebaseHelper from 'helpers/firebase';
+import { all, takeEvery, put, call, fork } from "redux-saga/effects";
+import actions from "./actions";
+import FirebaseHelper from "helpers/firebase";
 const { database, createBatch, rsfFirestore, createNewRef } = FirebaseHelper;
 const fsProps = {};
 const reverseString = str =>
   str
-    .split('')
+    .split("")
     .reverse()
-    .join('');
+    .join("");
 
 const sortChatrooms = (optionA, optionB) =>
   optionB.lastMessageTime - optionA.lastMessageTime;
@@ -15,29 +15,29 @@ const sortMessages = (optionA, optionB) =>
   optionA.messageTime - optionB.messageTime;
 const getCurrentUser = () => {
   return {
-    userId: 'wt4TiasxgPrQ3dNwVZ55',
+    userId: "wt4TiasxgPrQ3dNwVZ55",
     user: {
-      id: 'wt4TiasxgPrQ3dNwVZ55',
-      dob: '06-Apr-1993',
-      gender: 'Male',
-      language: 'Burmese',
-      mobileNo: '5726784596',
-      name: 'Zondra Kulic',
+      id: "wt4TiasxgPrQ3dNwVZ55",
+      dob: "06-Apr-1993",
+      gender: "Male",
+      language: "Burmese",
+      mobileNo: "5726784596",
+      name: "Zondra Kulic",
       profileImageUrl:
-        'https://s3.amazonaws.com/redqteam.com/mateadmin/support-male-zonra.png'
+        "https://campus-tour-application.firebaseapp.com/assets/img/account_circle.svg"
     }
   };
 };
 const initialization = payload => {
   fsProps.userId = payload.userId;
-  fsProps.usersCollections = database.collection('users');
-  fsProps.chatroomCollections = database.collection('chatRooms');
+  fsProps.usersCollections = database.collection("users");
+  fsProps.chatroomCollections = database.collection("chatRooms");
   fsProps.chatroomsUserCollections = fsProps.chatroomCollections.where(
-    'userId',
-    '==',
+    "userId",
+    "==",
     payload.userId
   );
-  fsProps.messagesCollections = database.collection('messages');
+  fsProps.messagesCollections = database.collection("messages");
 };
 
 const readUsers = async () =>
@@ -64,7 +64,7 @@ const readChatrooms = async () =>
   });
 const readMessages = async ({ id }) =>
   await fsProps.messagesCollections
-    .where('chatRoomId', '==', id)
+    .where("chatRoomId", "==", id)
     .get()
     .then(querySnapshot => {
       const messages = [];
@@ -134,7 +134,7 @@ function* addNewUser({ user, addNewUsersProp }) {
     userId: user.id,
     otherUserId: UserKey,
     otherUserInfo: { id: UserKey, ...addNewUsersProp },
-    lastMessage: '',
+    lastMessage: "",
     lastMessageTime: 0
   };
   const newChatroomRev = {
@@ -143,7 +143,7 @@ function* addNewUser({ user, addNewUsersProp }) {
     userId: UserKey,
     otherUserId: user.id,
     otherUserInfo: user,
-    lastMessage: '',
+    lastMessage: "",
     lastMessageTime: 0
   };
 
@@ -162,9 +162,9 @@ function* addNewUser({ user, addNewUsersProp }) {
 function* updateChatrooms() {
   const successActionCreator = data => {
     const { type, newIndex } = data.docChanges[0];
-    const dataMoodified = type === 'modified';
+    const dataMoodified = type === "modified";
     if (!dataMoodified) {
-      return { type: 'NO_CHANGE' };
+      return { type: "NO_CHANGE" };
     }
     const chatRoom = data.docs[newIndex].data();
 
