@@ -89,7 +89,8 @@ class Widget extends Component {
 
         <Row>
           <TwoThirdColumn sm={12} md={6}>
-            <Contacts title="Member" widgetHeight={410} stretched />
+            {/* <Contacts title="Member" widgetHeight={410} stretched /> */}
+            <TableWidget title="Agent Data" />g
           </TwoThirdColumn>
 
           <OneThirdColumn sm={12} md={6}>
@@ -124,11 +125,11 @@ class Widget extends Component {
           </OneThirdColumn>
         </Row>
 
-        <Row>
+        {/* <Row>
           <FullColumn>
             <TableWidget title="Agent Data" />
           </FullColumn>
-        </Row>
+        </Row> */}
         <Row>
           <OneThirdColumn sm={6} md={6}>
             <InstagramFeed stretched />
